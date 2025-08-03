@@ -1,0 +1,92 @@
+[
+  {
+    "Id": 1,
+    "position": 1,
+    "title": "Best Digital Marketing Agency Services | Expert SEO & PPC",
+    "url": "https://topagency.com/services",
+    "entities": ["Digital Marketing", "SEO Services", "PPC Management", "Content Marketing", "Social Media"],
+    "lsiTerms": ["online marketing", "search engine optimization", "pay per click", "digital strategy", "marketing automation"],
+    "snippetType": "Featured Snippet"
+  },
+  {
+    "Id": 2,
+    "position": 2,
+    "title": "Professional Marketing Agency - ROI-Driven Results",
+    "url": "https://marketingpros.com",
+    "entities": ["Marketing Agency", "ROI", "Lead Generation", "Brand Strategy", "Analytics"],
+    "lsiTerms": ["conversion optimization", "marketing metrics", "brand awareness", "customer acquisition", "digital presence"],
+    "snippetType": "Standard"
+  },
+  {
+    "Id": 3,
+    "position": 3,
+    "title": "Full-Service Digital Marketing Solutions | Growth Partners",
+    "url": "https://growthpartners.io",
+    "entities": ["Growth Marketing", "Digital Solutions", "Marketing Strategy", "Business Growth", "Performance Marketing"],
+    "lsiTerms": ["marketing solutions", "business development", "revenue growth", "marketing channels", "performance tracking"],
+    "snippetType": "Standard"
+  },
+  {
+    "Id": 4,
+    "position": 4,
+    "title": "Award-Winning Marketing Agency | Proven Track Record",
+    "url": "https://awardagency.com",
+    "entities": ["Award Winning", "Marketing Excellence", "Client Success", "Industry Recognition", "Marketing Innovation"],
+    "lsiTerms": ["marketing awards", "client testimonials", "case studies", "marketing expertise", "industry leader"],
+    "snippetType": "Standard"
+  },
+  {
+    "Id": 5,
+    "position": 5,
+    "title": "Local Marketing Agency Services | Community-Focused Results",
+    "url": "https://localmarketers.com",
+    "entities": ["Local Marketing", "Community Engagement", "Local SEO", "Regional Campaigns", "Neighborhood Targeting"],
+    "lsiTerms": ["local business marketing", "community outreach", "geographic targeting", "local search", "regional advertising"],
+    "snippetType": "Standard"
+  },
+  {
+    "Id": 6,
+    "position": 6,
+    "title": "Innovative Marketing Strategies | Creative Digital Campaigns",
+    "url": "https://creativecampaigns.net",
+    "entities": ["Creative Marketing", "Innovation", "Campaign Strategy", "Brand Creativity", "Marketing Innovation"],
+    "lsiTerms": ["creative campaigns", "innovative strategies", "brand storytelling", "creative content", "marketing creativity"],
+    "snippetType": "Standard"
+  },
+  {
+    "Id": 7,
+    "position": 7,
+    "title": "Data-Driven Marketing Agency | Analytics & Insights",
+    "url": "https://datamarketing.co",
+    "entities": ["Data Analytics", "Marketing Intelligence", "Performance Metrics", "Data-Driven Decisions", "Marketing Analytics"],
+    "lsiTerms": ["marketing data", "analytics platform", "performance insights", "data visualization", "marketing intelligence"],
+    "snippetType": "Standard"
+  },
+  {
+    "Id": 8,
+    "position": 8,
+    "title": "Boutique Marketing Agency | Personalized Service Excellence",
+    "url": "https://boutiquemarketing.com",
+    "entities": ["Boutique Agency", "Personalized Service", "Client Relationships", "Customized Solutions", "Premium Service"],
+    "lsiTerms": ["personalized marketing", "boutique services", "client-focused", "custom strategies", "premium support"],
+    "snippetType": "Standard"
+  },
+  {
+    "Id": 9,
+    "position": 9,
+    "title": "Enterprise Marketing Solutions | Scalable Growth Strategies",
+    "url": "https://enterprisemarketing.biz",
+    "entities": ["Enterprise Marketing", "Scalable Solutions", "Corporate Strategy", "Large-Scale Campaigns", "Enterprise Growth"],
+    "lsiTerms": ["enterprise solutions", "corporate marketing", "scalable strategies", "large business marketing", "enterprise growth"],
+    "snippetType": "Standard"
+  },
+  {
+    "Id": 10,
+    "position": 10,
+    "title": "Integrated Marketing Communications | Omnichannel Approach",
+    "url": "https://omnichannel.agency",
+    "entities": ["Integrated Marketing", "Omnichannel Strategy", "Multi-Platform Campaigns", "Unified Messaging", "Cross-Channel Marketing"],
+    "lsiTerms": ["omnichannel marketing", "integrated campaigns", "multi-platform strategy", "unified communications", "cross-channel approach"],
+    "snippetType": "Standard"
+  }
+]

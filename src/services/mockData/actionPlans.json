@@ -1,0 +1,180 @@
+[
+  {
+    "Id": 1,
+    "analysisId": 1,
+    "weekly": [
+      {
+        "Id": 1,
+        "title": "Optimize Homepage Title Tags",
+        "description": "Update homepage title tags to include primary keywords 'digital marketing agency' and location targeting",
+        "category": "On-Page SEO",
+        "priority": "High",
+        "estimatedTime": "2 hours",
+        "searchIntent": "Commercial"
+      },
+      {
+        "Id": 2,
+        "title": "Create Local Business Schema",
+        "description": "Implement local business schema markup with NAP information and service offerings",
+        "category": "Technical SEO",
+        "priority": "High",
+        "estimatedTime": "3 hours",
+        "searchIntent": "Informational"
+      },
+      {
+        "Id": 3,
+        "title": "Audit Internal Link Structure",
+        "description": "Review and optimize internal linking between service pages and blog content",
+        "category": "Technical SEO",
+        "priority": "Medium",
+        "estimatedTime": "4 hours",
+        "searchIntent": "Informational"
+      },
+      {
+        "Id": 4,
+        "title": "Optimize Service Page Meta Descriptions",
+        "description": "Rewrite meta descriptions for all service pages to improve CTR from SERP",
+        "category": "On-Page SEO",
+        "priority": "Medium",
+        "estimatedTime": "2 hours",
+        "searchIntent": "Commercial"
+      },
+      {
+        "Id": 5,
+        "title": "Create FAQ Schema for Service Pages",
+        "description": "Add FAQ schema markup to service pages to target featured snippets",
+        "category": "Technical SEO",
+        "priority": "Medium",
+        "estimatedTime": "3 hours",
+        "searchIntent": "Informational"
+      },
+      {
+        "Id": 6,
+        "title": "Optimize Image Alt Text",
+        "description": "Add descriptive alt text to all images focusing on target keywords",
+        "category": "On-Page SEO",
+        "priority": "Low",
+        "estimatedTime": "1 hour",
+        "searchIntent": "Informational"
+      },
+      {
+        "Id": 7,
+        "title": "Set Up Google Search Console",
+        "description": "Configure GSC and submit XML sitemap for better indexing",
+        "category": "Technical SEO",
+        "priority": "High",
+        "estimatedTime": "1 hour",
+        "searchIntent": "Informational"
+      }
+    ],
+    "monthly": [
+      {
+        "Id": 8,
+        "title": "Comprehensive Content Audit",
+        "description": "Analyze all existing content for keyword optimization opportunities and content gaps",
+        "category": "Content Strategy",
+        "priority": "High",
+        "estimatedTime": "8 hours",
+        "searchIntent": "Informational"
+      },
+      {
+        "Id": 9,
+        "title": "Create Industry-Specific Landing Pages",
+        "description": "Develop targeted landing pages for key industries like healthcare, finance, and e-commerce",
+        "category": "Content Creation",
+        "priority": "High",
+        "estimatedTime": "16 hours",
+        "searchIntent": "Commercial"
+      },
+      {
+        "Id": 10,
+        "title": "Build Local Citation Profile",
+        "description": "Create and optimize listings on major directories and local business platforms",
+        "category": "Local SEO",
+        "priority": "High",
+        "estimatedTime": "12 hours",
+        "searchIntent": "Transactional"
+      },
+      {
+        "Id": 11,
+        "title": "Develop Link Building Strategy",
+        "description": "Create outreach plan for acquiring high-quality backlinks from industry publications",
+        "category": "Off-Page SEO",
+        "priority": "Medium",
+        "estimatedTime": "20 hours",
+        "searchIntent": "Informational"
+      },
+      {
+        "Id": 12,
+        "title": "Create Video Content Series",
+        "description": "Produce educational video content targeting long-tail keywords in digital marketing",
+        "category": "Content Creation",
+        "priority": "Medium",
+        "estimatedTime": "24 hours",
+        "searchIntent": "Informational"
+      },
+      {
+        "Id": 13,
+        "title": "Implement Advanced Analytics",
+        "description": "Set up enhanced e-commerce tracking and custom conversion goals",
+        "category": "Analytics",
+        "priority": "Medium",
+        "estimatedTime": "6 hours",
+        "searchIntent": "Informational"
+      }
+    ],
+    "internalLinks": [
+      {
+        "Id": 1,
+        "sourcePage": "Homepage",
+        "destinationPage": "SEO Services",
+        "anchorText": "comprehensive SEO services",
+        "context": "Our team provides comprehensive SEO services to improve your search rankings"
+      },
+      {
+        "Id": 2,
+        "sourcePage": "Blog Post: Digital Marketing Trends",
+        "destinationPage": "PPC Services",
+        "anchorText": "pay-per-click advertising",
+        "context": "Learn more about effective pay-per-click advertising strategies"
+      },
+      {
+        "Id": 3,
+        "sourcePage": "About Page",
+        "destinationPage": "Case Studies",
+        "anchorText": "proven results",
+        "context": "See our proven results with successful client campaigns"
+      },
+      {
+        "Id": 4,
+        "sourcePage": "SEO Services",
+        "destinationPage": "Content Marketing",
+        "anchorText": "content marketing strategy",
+        "context": "SEO works best when combined with a solid content marketing strategy"
+      },
+      {
+        "Id": 5,
+        "sourcePage": "Contact Page",
+        "destinationPage": "Free Audit",
+        "anchorText": "free SEO audit",
+        "context": "Get started with a free SEO audit of your website"
+      }
+    ],
+    "technicalIssues": [
+      {
+        "Id": 1,
+        "issue": "Page Load Speed",
+        "description": "Homepage loads in 4.2 seconds, should be under 3 seconds",
+        "priority": "High",
+        "solution": "Optimize images and enable compression"
+      },
+      {
+        "Id": 2,
+        "issue": "Mobile Responsiveness",
+        "description": "Some service pages not properly optimized for mobile",
+        "priority": "High",
+        "solution": "Implement responsive design improvements"
+      }
+    ]
+  }
+]

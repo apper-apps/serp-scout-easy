@@ -1,0 +1,122 @@
+[
+  {
+    "Id": 1,
+    "term": "online marketing",
+    "relevance": 94,
+    "category": "Primary"
+  },
+  {
+    "Id": 2,
+    "term": "search engine optimization",
+    "relevance": 92,
+    "category": "Primary"
+  },
+  {
+    "Id": 3,
+    "term": "pay per click",
+    "relevance": 89,
+    "category": "Primary"
+  },
+  {
+    "Id": 4,
+    "term": "digital strategy",
+    "relevance": 87,
+    "category": "Primary"
+  },
+  {
+    "Id": 5,
+    "term": "marketing automation",
+    "relevance": 85,
+    "category": "Secondary"
+  },
+  {
+    "Id": 6,
+    "term": "conversion optimization",
+    "relevance": 83,
+    "category": "Secondary"
+  },
+  {
+    "Id": 7,
+    "term": "marketing metrics",
+    "relevance": 81,
+    "category": "Secondary"
+  },
+  {
+    "Id": 8,
+    "term": "brand awareness",
+    "relevance": 79,
+    "category": "Secondary"
+  },
+  {
+    "Id": 9,
+    "term": "customer acquisition",
+    "relevance": 77,
+    "category": "Secondary"
+  },
+  {
+    "Id": 10,
+    "term": "digital presence",
+    "relevance": 75,
+    "category": "Secondary"
+  },
+  {
+    "Id": 11,
+    "term": "marketing solutions",
+    "relevance": 73,
+    "category": "Tertiary"
+  },
+  {
+    "Id": 12,
+    "term": "business development",
+    "relevance": 71,
+    "category": "Tertiary"
+  },
+  {
+    "Id": 13,
+    "term": "revenue growth",
+    "relevance": 69,
+    "category": "Tertiary"
+  },
+  {
+    "Id": 14,
+    "term": "marketing channels",
+    "relevance": 67,
+    "category": "Tertiary"
+  },
+  {
+    "Id": 15,
+    "term": "performance tracking",
+    "relevance": 65,
+    "category": "Tertiary"
+  },
+  {
+    "Id": 16,
+    "term": "local business marketing",
+    "relevance": 63,
+    "category": "Tertiary"
+  },
+  {
+    "Id": 17,
+    "term": "community outreach",
+    "relevance": 61,
+    "category": "Tertiary"
+  },
+  {
+    "Id": 18,
+    "term": "geographic targeting",
+    "relevance": 59,
+    "category": "Tertiary"
+  },
+  {
+    "Id": 19,
+    "term": "regional advertising",
+    "relevance": 57,
+    "category": "Tertiary"
+  },
+  {
+    "Id": 20,
+    "term": "marketing intelligence",
+    "relevance": 55,
+    "category": "Tertiary"
+  }
+]

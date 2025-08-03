@@ -1,0 +1,23 @@
+[
+  {
+    "Id": 1,
+    "url": "https://example-agency.com",
+    "businessType": "Digital Marketing Agency",
+    "location": "San Francisco, CA",
+    "timestamp": "2024-01-20T10:30:00Z"
+  },
+  {
+    "Id": 2,
+    "url": "https://techstartup.co",
+    "businessType": "Technology Startup",
+    "location": "Austin, TX",
+    "timestamp": "2024-01-20T11:15:00Z"
+  },
+  {
+    "Id": 3,
+    "url": "https://localrestaurant.com",
+    "businessType": "Restaurant",
+    "location": "New York, NY",
+    "timestamp": "2024-01-20T12:00:00Z"
+  }
+]

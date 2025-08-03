@@ -1,0 +1,107 @@
+[
+  {
+    "Id": 1,
+    "name": "Digital Marketing",
+    "category": "Core Service",
+    "frequency": 45,
+    "relevance": 95
+  },
+  {
+    "Id": 2,
+    "name": "SEO Services",
+    "category": "Core Service",
+    "frequency": 38,
+    "relevance": 92
+  },
+  {
+    "Id": 3,
+    "name": "PPC Management",    
+    "category": "Core Service",
+    "frequency": 32,
+    "relevance": 88
+  },
+  {
+    "Id": 4,
+    "name": "Content Marketing",
+    "category": "Core Service",
+    "frequency": 29,
+    "relevance": 85
+  },
+  {
+    "Id": 5,
+    "name": "Social Media Marketing",
+    "category": "Core Service",
+    "frequency": 25,
+    "relevance": 82
+  },
+  {
+    "Id": 6,
+    "name": "Marketing Agency",
+    "category": "Business Type",
+    "frequency": 41,
+    "relevance": 94
+  },
+  {
+    "Id": 7,
+    "name": "Lead Generation",
+    "category": "Service Benefit",
+    "frequency": 22,
+    "relevance": 79
+  },
+  {
+    "Id": 8,
+    "name": "Brand Strategy",
+    "category": "Core Service",
+    "frequency": 18,
+    "relevance": 76
+  },
+  {
+    "Id": 9,
+    "name": "ROI",
+    "category": "Metric",
+    "frequency": 35,
+    "relevance": 90
+  },
+  {
+    "Id": 10,
+    "name": "Conversion Optimization",
+    "category": "Service Benefit",
+    "frequency": 27,
+    "relevance": 84
+  },
+  {
+    "Id": 11,
+    "name": "Google Ads",
+    "category": "Platform",
+    "frequency": 31,
+    "relevance": 87
+  },
+  {
+    "Id": 12,
+    "name": "Facebook Advertising",
+    "category": "Platform",
+    "frequency": 24,
+    "relevance": 81
+  },
+  {
+    "Id": 13,
+    "name": "Marketing Analytics",
+    "category": "Tool",
+    "frequency": 19,
+    "relevance": 78
+  },
+  {
+    "Id": 14,
+    "name": "Local SEO",
+    "category": "Core Service",
+    "frequency": 16,
+    "relevance": 75
+  },
+  {
+    "Id": 15,
+    "name": "E-commerce Marketing",
+    "category": "Industry",
+    "frequency": 14,
+    "relevance": 72
+  }
+]

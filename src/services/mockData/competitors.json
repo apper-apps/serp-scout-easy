@@ -1,0 +1,131 @@
+[
+  {
+    "Id": 1,
+    "domain": "topagency.com",
+    "keywords": [
+      {
+        "term": "digital marketing agency",
+        "volume": 12000,
+        "position": 1,
+        "difficulty": 85
+      },
+      {
+        "term": "SEO services",
+        "volume": 8500,
+        "position": 2,
+        "difficulty": 78
+      },
+      {
+        "term": "PPC management",
+        "volume": 4200,
+        "position": 1,
+        "difficulty": 72
+      },
+      {
+        "term": "content marketing agency",
+        "volume": 3800,
+        "position": 3,
+        "difficulty": 68
+      },
+      {
+        "term": "social media marketing",
+        "volume": 9200,
+        "position": 4,
+        "difficulty": 75
+      }
+    ],
+    "contentTypes": ["Service Pages", "Case Studies", "Blog Posts", "Landing Pages"],
+    "gaps": [
+      "Local SEO content targeting specific cities",
+      "Industry-specific marketing guides",
+      "Video marketing tutorials and case studies",
+      "Interactive tools and calculators for marketing ROI"
+    ]
+  },
+  {
+    "Id": 2,
+    "domain": "marketingpros.com",
+    "keywords": [
+      {
+        "term": "marketing agency ROI",
+        "volume": 2800,
+        "position": 1,
+        "difficulty": 65
+      },
+      {
+        "term": "lead generation services",
+        "volume": 6500,
+        "position": 2,
+        "difficulty": 82
+      },
+      {
+        "term": "brand strategy consulting",
+        "volume": 1900,
+        "position": 1,
+        "difficulty": 58
+      },
+      {
+        "term": "marketing analytics",
+        "volume": 4100,
+        "position": 3,
+        "difficulty": 70
+      },
+      {
+        "term": "conversion optimization",
+        "volume": 5200,
+        "position": 2,
+        "difficulty": 74
+      }
+    ],
+    "contentTypes": ["ROI Calculators", "White Papers", "Webinars", "Performance Reports"],
+    "gaps": [
+      "Small business marketing packages",
+      "Marketing automation tutorials",
+      "Cross-platform attribution guides",
+      "Client onboarding process documentation"
+    ]
+  },
+  {
+    "Id": 3,
+    "domain": "growthpartners.io",
+    "keywords": [
+      {
+        "term": "growth marketing agency",
+        "volume": 3200,
+        "position": 1,
+        "difficulty": 71
+      },
+      {
+        "term": "performance marketing",
+        "volume": 4800,
+        "position": 2,
+        "difficulty": 76
+      },
+      {
+        "term": "digital marketing solutions",
+        "volume": 5500,
+        "position": 3,
+        "difficulty": 79
+      },
+      {
+        "term": "business growth strategies",
+        "volume": 2100,
+        "position": 1,
+        "difficulty": 62
+      },
+      {
+        "term": "marketing technology stack",
+        "volume": 1600,
+        "position": 2,
+        "difficulty": 68
+      }
+    ],
+    "contentTypes": ["Growth Playbooks", "Strategy Templates", "Tool Comparisons", "Success Stories"],
+    "gaps": [
+      "Startup marketing playbooks",
+      "SaaS-specific growth strategies",
+      "Marketing technology integration guides",
+      "Performance benchmarking tools"
+    ]
+  }
+]
