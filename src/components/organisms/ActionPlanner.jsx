@@ -1,38 +1,60 @@
-import React, { useState, useEffect } from "react"
-import Card from "@/components/atoms/Card"
-import Button from "@/components/atoms/Button"
-import Badge from "@/components/atoms/Badge"
-import ApperIcon from "@/components/ApperIcon"
-import ProgressRing from "@/components/molecules/ProgressRing"
-import Loading from "@/components/ui/Loading"
-import Error from "@/components/ui/Error"
-import Empty from "@/components/ui/Empty"
-import { actionPlanService } from "@/services/api/actionPlanService"
-import { toast } from "react-toastify"
+import React, { useEffect, useState } from "react";
+import { toast } from "react-toastify";
+import { actionPlanService } from "@/services/api/actionPlanService";
+import ApperIcon from "@/components/ApperIcon";
+import ProgressRing from "@/components/molecules/ProgressRing";
+import Loading from "@/components/ui/Loading";
+import Error from "@/components/ui/Error";
+import Empty from "@/components/ui/Empty";
+import Badge from "@/components/atoms/Badge";
+import Button from "@/components/atoms/Button";
+import Card from "@/components/atoms/Card";
 
-const ActionPlanner = ({ analysis, serpData, competitors }) => {
-  const [actionPlan, setActionPlan] = useState(null)
+function ActionPlanner({ analysis, serpData, competitors }) {
   const [loading, setLoading] = useState(false)
-  const [error, setError] = useState("")
-  const [activeTab, setActiveTab] = useState("weekly")
+  const [error, setError] = useState(null)
   const [completedTasks, setCompletedTasks] = useState(new Set())
-
+  const [plan, setPlan] = useState(null)
+  const [planLoading, setPlanLoading] = useState(false)
+  const [activeTab, setActiveTab] = useState("weekly")
+  const [actionPlan, setActionPlan] = useState(null)
+  
+  // Fetch action plan when analysis changes
   useEffect(() => {
-    if (analysis && serpData?.length > 0) {
-      generateActionPlan()
+    if (analysis?.id) {
+      fetchActionPlan()
     }
-  }, [analysis, serpData])
-
+  }, [analysis?.id])
+  
+  const fetchActionPlan = async () => {
+    try {
+      setPlanLoading(true)
+      setError(null)
+      const planData = await actionPlanService.getById(analysis.id)
+      setPlan(planData)
+      setActionPlan(planData)
+    } catch (err) {
+      console.error('Failed to fetch action plan:', err)
+      setError('Failed to load action plan')
+    } finally {
+      setPlanLoading(false)
+    }
+  }
+  
+  // Generate action plan based on analysis
   const generateActionPlan = async () => {
+    if (!analysis) return
+    
     setLoading(true)
     setError("")
     try {
-      const plan = await actionPlanService.generatePlan({
-        analysisId: analysis.Id,
+      const planData = await actionPlanService.generatePlan({
+        analysisId: analysis.id,
         businessType: analysis.businessType,
         location: analysis.location
       })
-      setActionPlan(plan)
+      setActionPlan(planData)
+      setPlan(planData)
     } catch (err) {
       setError("Failed to generate action plan. Please try again.")
     } finally {
@@ -109,15 +131,14 @@ const downloadSEOPlan = async () => {
       console.error("Download error:", error)
     }
   }
-  if (loading) return <Loading />
+if (loading || planLoading) return <Loading />
   if (error) return <Error message={error} onRetry={generateActionPlan} />
-  if (!analysis || !serpData?.length) {
+  if (!analysis) {
     return <Empty message="Complete analysis to generate action plan" />
   }
 
   const currentTasks = activeTab === "weekly" ? actionPlan?.weekly || [] : actionPlan?.monthly || []
   const progress = calculateProgress(currentTasks)
-
   return (
     <div className="space-y-6">
       <Card className="p-6">
