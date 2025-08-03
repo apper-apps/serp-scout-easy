@@ -6,9 +6,10 @@ import ActionPlanner from "@/components/organisms/ActionPlanner"
 import EntitySuggestions from "@/components/organisms/EntitySuggestions"
 
 const HomePage = () => {
-  const [currentAnalysis, setCurrentAnalysis] = useState(null)
+const [currentAnalysis, setCurrentAnalysis] = useState(null)
   const [serpData, setSerpData] = useState([])
   const [competitors, setCompetitors] = useState([])
+  const [selectedLocation, setSelectedLocation] = useState(null)
 
   const handleAnalysisComplete = (analysis) => {
     setCurrentAnalysis(analysis)
@@ -19,6 +20,10 @@ const HomePage = () => {
 
   const handleSerpResultsUpdate = (results) => {
     setSerpData(results)
+  }
+
+  const handleLocationChange = (locationId) => {
+    setSelectedLocation(locationId)
   }
 
   return (
@@ -41,9 +46,11 @@ const HomePage = () => {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Left Column - Main Analysis */}
         <div className="lg:col-span-2 space-y-8">
-          <SerpResults 
+<SerpResults 
             analysis={currentAnalysis} 
             onResultsUpdate={handleSerpResultsUpdate}
+            selectedLocation={selectedLocation}
+            onLocationChange={handleLocationChange}
           />
           
           <CompetitorAnalysis 

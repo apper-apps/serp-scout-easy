@@ -6,25 +6,25 @@ import ApperIcon from "@/components/ApperIcon"
 import Loading from "@/components/ui/Loading"
 import Error from "@/components/ui/Error"
 import Empty from "@/components/ui/Empty"
+import LocationSelector from "@/components/molecules/LocationSelector"
 import { serpService } from "@/services/api/serpService"
 
-const SerpResults = ({ analysis, onResultsUpdate }) => {
+const SerpResults = ({ analysis, onResultsUpdate, selectedLocation, onLocationChange }) => {
   const [serpData, setSerpData] = useState([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState("")
   const [expandedResult, setExpandedResult] = useState(null)
-
-  useEffect(() => {
+useEffect(() => {
     if (analysis) {
       loadSerpData()
     }
-  }, [analysis])
+  }, [analysis, selectedLocation])
 
-  const loadSerpData = async () => {
+const loadSerpData = async () => {
     setLoading(true)
     setError("")
     try {
-      const data = await serpService.getAll()
+      const data = await serpService.getAll(selectedLocation)
       setSerpData(data)
       onResultsUpdate(data)
     } catch (err) {
@@ -32,6 +32,10 @@ const SerpResults = ({ analysis, onResultsUpdate }) => {
     } finally {
       setLoading(false)
     }
+  }
+
+  const handleLocationChange = (locationId) => {
+    onLocationChange(locationId)
   }
 
   const toggleExpanded = (position) => {
@@ -44,16 +48,29 @@ const SerpResults = ({ analysis, onResultsUpdate }) => {
 
   return (
     <Card className="p-6">
-      <div className="flex items-center justify-between mb-6">
+<div className="flex items-center justify-between mb-6">
         <div className="flex items-center space-x-3">
           <ApperIcon name="Search" className="w-5 h-5 text-accent" />
           <h2 className="text-lg font-semibold text-white">SERP Analysis Results</h2>
           <Badge variant="success">{serpData.length} Results</Badge>
+          {selectedLocation && (
+            <Badge variant="outline" className="text-accent border-accent">
+              <ApperIcon name="MapPin" className="w-3 h-3 mr-1" />
+              Location-Targeted
+            </Badge>
+          )}
         </div>
-        <Button variant="outline" size="sm" onClick={loadSerpData}>
-          <ApperIcon name="RefreshCw" className="w-4 h-4 mr-2" />
-          Refresh
-        </Button>
+        <div className="flex items-center space-x-2">
+          <LocationSelector
+            selectedLocation={selectedLocation}
+            onLocationChange={handleLocationChange}
+            disabled={loading}
+          />
+          <Button variant="outline" size="sm" onClick={loadSerpData} disabled={loading}>
+            <ApperIcon name="RefreshCw" className={`w-4 h-4 mr-2 ${loading ? 'animate-spin' : ''}`} />
+            Refresh
+          </Button>
+        </div>
       </div>
 
       <div className="space-y-3">
