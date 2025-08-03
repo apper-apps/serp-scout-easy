@@ -52,7 +52,6 @@ export const downloadPDF = async (data, filename) => {
 }
 
 const convertToCSV = (data) => {
-const convertToCSV = (data) => {
   if (!Array.isArray(data) || data.length === 0) {
     return ''
   }
@@ -242,6 +241,5 @@ export const downloadActionPlan = (planData, filename) => {
     }
   }
   
-  downloadJSON(formattedData, filename)
-}
+downloadJSON(formattedData, filename)
 }
