@@ -1,10 +1,10 @@
 import React, { useState } from "react"
 import UrlAnalyzer from "@/components/organisms/UrlAnalyzer"
+import TechnicalSeoScorecard from "@/components/organisms/TechnicalSeoScorecard"
 import SerpResults from "@/components/organisms/SerpResults"
 import CompetitorAnalysis from "@/components/organisms/CompetitorAnalysis"
 import ActionPlanner from "@/components/organisms/ActionPlanner"
 import EntitySuggestions from "@/components/organisms/EntitySuggestions"
-
 const HomePage = () => {
 const [currentAnalysis, setCurrentAnalysis] = useState(null)
   const [serpData, setSerpData] = useState([])
@@ -43,10 +43,12 @@ const [currentAnalysis, setCurrentAnalysis] = useState(null)
       <UrlAnalyzer onAnalysisComplete={handleAnalysisComplete} />
 
       {/* Two Column Layout */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Left Column - Main Analysis */}
         <div className="lg:col-span-2 space-y-8">
-<SerpResults 
+          <TechnicalSeoScorecard analysis={currentAnalysis} />
+          
+          <SerpResults 
             analysis={currentAnalysis} 
             onResultsUpdate={handleSerpResultsUpdate}
             selectedLocation={selectedLocation}
@@ -57,7 +59,6 @@ const [currentAnalysis, setCurrentAnalysis] = useState(null)
             serpData={serpData}
           />
         </div>
-
         {/* Right Column - Action Plans */}
         <div className="space-y-8">
           <ActionPlanner 
