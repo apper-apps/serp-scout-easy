@@ -10,7 +10,11 @@ const UrlAnalyzer = ({ onAnalysisComplete }) => {
   const [loading, setLoading] = useState(false)
   const [currentAnalysis, setCurrentAnalysis] = useState(null)
 
-const handleAnalyze = async (url) => {
+const [isEditing, setIsEditing] = useState(false)
+  const [editedBusinessType, setEditedBusinessType] = useState('')
+  const [editedLocation, setEditedLocation] = useState('')
+
+  const handleAnalyze = async (url) => {
     setLoading(true)
     try {
       // Enhanced analysis process with URL-based detection
@@ -54,6 +58,8 @@ const handleAnalyze = async (url) => {
       })
 
       setCurrentAnalysis(analysis)
+      setEditedBusinessType(analysis.businessType)
+      setEditedLocation(analysis.location)
       onAnalysisComplete(analysis)
       
       toast.success("Analysis completed successfully!")
@@ -63,6 +69,34 @@ const handleAnalyze = async (url) => {
     } finally {
       setLoading(false)
     }
+  }
+
+  const handleStartEdit = () => {
+    setIsEditing(true)
+  }
+
+  const handleSaveEdit = async () => {
+    try {
+      const updatedAnalysis = await analysisService.update(currentAnalysis.Id, {
+        businessType: editedBusinessType,
+        location: editedLocation,
+        timestamp: new Date().toISOString()
+      })
+      
+      setCurrentAnalysis(updatedAnalysis)
+      onAnalysisComplete(updatedAnalysis)
+      setIsEditing(false)
+      toast.success("Analysis information updated successfully!")
+    } catch (error) {
+      toast.error("Failed to update analysis. Please try again.")
+      console.error("Update error:", error)
+    }
+  }
+
+  const handleCancelEdit = () => {
+    setEditedBusinessType(currentAnalysis.businessType)
+    setEditedLocation(currentAnalysis.location)
+    setIsEditing(false)
   }
 
   return (
