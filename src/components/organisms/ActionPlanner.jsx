@@ -144,18 +144,18 @@ if (loading || planLoading) return <Loading />
       <Card className="p-6">
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center space-x-3">
-            <ApperIcon name="Calendar" className="w-5 h-5 text-accent" />
+<ApperIcon name="Calendar" className="w-5 h-5 text-accent" />
             <h2 className="text-lg font-semibold text-white">SEO Action Plan</h2>
-            <Badge variant="success">Generated</Badge>
+            <Badge variant="success">Data-Driven</Badge>
           </div>
-<div className="flex gap-2">
+          <div className="flex gap-2">
             <Button variant="outline" size="sm" onClick={downloadSEOPlan}>
               <ApperIcon name="Download" className="w-4 h-4 mr-2" />
               Download Plan
             </Button>
             <Button variant="outline" size="sm" onClick={regeneratePlan}>
               <ApperIcon name="RefreshCw" className="w-4 h-4 mr-2" />
-              Regenerate Plan
+              Generate Real Plan
             </Button>
           </div>
         </div>

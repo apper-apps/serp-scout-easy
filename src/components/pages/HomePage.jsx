@@ -61,7 +61,7 @@ const [currentAnalysis, setCurrentAnalysis] = useState(null)
         </div>
         {/* Right Column - Action Plans */}
         <div className="space-y-8">
-          <ActionPlanner 
+<ActionPlanner 
             analysis={currentAnalysis}
             serpData={serpData}
             competitors={competitors}
