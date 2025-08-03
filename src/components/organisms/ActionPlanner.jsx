@@ -63,7 +63,52 @@ const ActionPlanner = ({ analysis, serpData, competitors }) => {
     await generateActionPlan()
     toast.success("Action plan regenerated successfully!")
   }
-
+const downloadSEOPlan = async () => {
+    try {
+      toast.info("Generating SEO action plan...")
+      
+      // Simulate plan generation
+      await new Promise(resolve => setTimeout(resolve, 1000))
+      
+      const planData = {
+        url: analysis?.url || 'N/A',
+        businessType: analysis?.businessType || 'N/A',
+        generatedAt: new Date().toISOString(),
+        actionPlan: plan,
+        priority: {
+          high: plan?.tasks?.filter(task => task.priority === 'high') || [],
+          medium: plan?.tasks?.filter(task => task.priority === 'medium') || [],
+          low: plan?.tasks?.filter(task => task.priority === 'low') || []
+        },
+        estimatedTimeline: '3-6 months',
+        estimatedImpact: 'Medium to High',
+        keyMetrics: [
+          'Organic traffic increase: 25-40%',
+          'Keyword rankings improvement: 15-30%',
+          'Page load speed improvement: 20-35%',
+          'Mobile usability score: 85-95%'
+        ]
+      }
+      
+      // Create and download JSON file
+      const blob = new Blob([JSON.stringify(planData, null, 2)], { 
+        type: 'application/json' 
+      })
+      const url = URL.createObjectURL(blob)
+      const a = document.createElement('a')
+      a.href = url
+      a.download = `seo-action-plan-${Date.now()}.json`
+      document.body.appendChild(a)
+      a.click()
+      document.body.removeChild(a)
+      URL.revokeObjectURL(url)
+      
+      toast.success("SEO action plan downloaded successfully!")
+    } catch (error) {
+      toast.error("Failed to generate SEO plan")
+      console.error("Download error:", error)
+    }
+  }
   if (loading) return <Loading />
   if (error) return <Error message={error} onRetry={generateActionPlan} />
   if (!analysis || !serpData?.length) {
@@ -82,10 +127,16 @@ const ActionPlanner = ({ analysis, serpData, competitors }) => {
             <h2 className="text-lg font-semibold text-white">SEO Action Plan</h2>
             <Badge variant="success">Generated</Badge>
           </div>
-          <Button variant="outline" size="sm" onClick={regeneratePlan}>
-            <ApperIcon name="RefreshCw" className="w-4 h-4 mr-2" />
-            Regenerate Plan
-          </Button>
+<div className="flex gap-2">
+            <Button variant="outline" size="sm" onClick={downloadSEOPlan}>
+              <ApperIcon name="Download" className="w-4 h-4 mr-2" />
+              Download Plan
+            </Button>
+            <Button variant="outline" size="sm" onClick={regeneratePlan}>
+              <ApperIcon name="RefreshCw" className="w-4 h-4 mr-2" />
+              Regenerate Plan
+            </Button>
+          </div>
         </div>
 
         <div className="flex items-center space-x-6 mb-6">
